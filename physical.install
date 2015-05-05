@@ -4,6 +4,32 @@
  * Implements hook_field_schema().
  */
 function physical_field_schema($field) {
+  if ($field['type'] == 'physical_volume') {
+    return array(
+      'columns' => array(
+        'volume' => array(
+          'description' => 'The numeric volume value.',
+          'type' => 'numeric',
+          'size' => 'normal',
+          'not null' => TRUE,
+          'default' => 0,
+          'precision' => 15,
+          'scale' => 5,
+        ),
+        'unit' => array(
+          'description' => 'The unit of measurement.',
+          'type' => 'varchar',
+          'length' => '255',
+          'not null' => TRUE,
+          'default' => '',
+        ),
+      ),
+      'indexes' => array(
+        'volume' => array('volume'),
+      ),
+    );
+  }
+
   if ($field['type'] == 'physical_weight') {
     return array(
       'columns' => array(

@@ -5,6 +5,16 @@
  * Hooks provided by the Physical Fields module.
  */
 
+/**
+ * Allows modules to alter or define additional volume units of measurement.
+ *
+ * @param array &$units
+ *   The array of volume units of measurement, each one defined as an array
+ *   containing a name and abbreviation.
+ */
+function hook_physical_volume_unit_info_alter(array &$units) {
+  // No example.
+}
 
 /**
  * Allows modules to alter or define additional weight units of measurement.

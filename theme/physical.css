@@ -1,4 +1,8 @@
 
+.physical-volume-input .form-item {
+  display: inline-block;
+}
+
 .physical-weight-textfield .form-item {
   display: inline;
 }
